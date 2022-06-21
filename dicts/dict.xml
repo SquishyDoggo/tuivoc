@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+	<vocabulary id='1'>
+		<german note="">
+			<word>
+				to exist
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				います	
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='2'>
+		<german note="">
+			<word>
+			stamp
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="きって" >
+			切手
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='3'>
+		<german note="s.t. money or time">
+			<word>
+				to take time
+			</word>
+			<word>
+				to cost
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				かかります	
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='4'>
+		<german note="e.g. in the company">
+			<word>
+				to take time off
+			</word>
+			<word>
+				missing
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="やみます">
+				休みます	
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='5'>
+		<german note="">
+			<word>
+				apple
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				りんご	
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='6'>
+		<german note="">
+			<word>
+				tangerine
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				みかん	
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='7'>
+		<german note="">
+			<word>
+				sandwich
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				サンドイッチ
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='8'>
+		<german note="">
+			<word>
+				curry
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				カレ
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='9'>
+		<german note="">
+			<word>
+				ice cream
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				アイスクリーム
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='10'>
+		<german note="">
+			<word>
+				post card
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				はがき
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='11'>
+		<german note="">
+			<word>
+				envelope
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="ふうとう">
+				封筒
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='12'>
+		<german note="">
+			<word>
+				parents
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="りょうしん">
+				両親
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='13'>
+		<german note="">
+			<word>
+				siblings
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="きょうだい">
+				兄弟
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='14'>
+		<german note="">
+			<word>
+				Ausland
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="がいこく">
+				外国
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='15'>
+		<german note="">
+			<word>
+				exchange student
+			</word>
+			<word>
+				foreign student
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="りゅがくせい">
+				留学生
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='16'>
+		<german note="">
+			<word>
+				class
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				クラス
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='17'>
+		<german note="">
+			<word>
+				ーhours
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="ーじかん">
+				ー時間
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='18'>
+		<german note="">
+			<word>
+				ーweeks
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="ーしゅうかん">
+				ー週間
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='19'>
+		<german note="">
+			<word>
+				ーmonths
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="ーかげつ">
+				ーか月
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='20'>
+		<german note="">
+			<word>
+				ーyears
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="ーねん">
+				ー年
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='21'>
+		<german note="">
+			<word>
+				about〜
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				〜ぐらい
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='22'>
+		<german note="">
+			<word>
+				how long
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				どのくらい
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='23'>
+		<german note="">
+			<word>
+				in total
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="ぜんぶで">
+				全部で
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='24'>
+		<german note="">
+			<word>
+				everyone;everything
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				みんな
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='25'>
+		<german note="">
+			<word>
+				only〜
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="">
+				〜だけ
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='26'>
+		<german note="of you">
+			<word>
+				older brother
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="あに">
+				兄
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='27'>
+		<german note="of someone else">
+			<word>
+				older brother
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="おにいさん">
+				お兄さん
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='28'>
+		<german note="of you">
+			<word>
+				older sister
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="あね">
+				姉
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='29'>
+		<german note="of someone else">
+			<word>
+				older sister
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="あねえさん">
+				あ姉さん
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='30'>
+		<german note="of you">
+			<word>
+				younger brother
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="おとうと">
+				弟
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='31'>
+		<german note="of someone else">
+			<word>
+				younger brother
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="おとうとさん">
+				弟さん
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='32'>
+		<german note="of you">
+			<word>
+				younger sister
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="いもうと">
+				妹
+			</word>
+		</japanese>
+	</vocabulary>
+	<vocabulary id='33'>
+		<german note="of someone else">
+			<word>
+				younger sister
+			</word>
+		</german>
+		<japanese note="">
+			<word furigana="いもうとさん">
+				妹さん
+			</word>
+		</japanese>
+	</vocabulary>
+</dictionary>
