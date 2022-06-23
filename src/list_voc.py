@@ -25,6 +25,7 @@ def display_voc(vocs,disp_type=0):
         by the user.
 
     """
+    w_voc_score = curses.newwin(5,13,0,curses.COLS//2)
     w_voc_disp = curses.newwin(5,curses.COLS//3,curses.LINES//3,curses.COLS//3)
     w_voc_resp = curses.newwin(2,curses.COLS//3,curses.LINES//2,curses.COLS//3)
     (y,x) = w_voc_disp.getmaxyx()
@@ -35,6 +36,10 @@ def display_voc(vocs,disp_type=0):
     else:
         ja = vocs[1]
         en = vocs[0]
+
+    num_cor_voc = 0
+    w_voc_score.addstr(0,0,str(num_cor_voc)+'/'+str(len(vocs[0])))
+    w_voc_score.refresh()
     
     for i in range(0,len(en)):
         if (not isinstance(en[i],list)):
@@ -43,12 +48,16 @@ def display_voc(vocs,disp_type=0):
             w_voc_disp.addstr(1,x_pos_text,en[i])
             w_voc_disp.refresh()
 
-            user_resp = w_voc_resp.getstr(1,x_pos_text).decode(encoding='utf-8')
+            user_resp = w_voc_resp.getstr(0,x_pos_text).decode(encoding='utf-8')
             if (user_resp != ja[i]):
                 w_voc_disp.addstr(2,x_pos_text,'X:'+ja[i])
             else:
+                num_cor_voc += 1
+                w_voc_score.clear()
+                w_voc_score.addstr(0,0,str(num_cor_voc)+'/'+str(len(vocs[0])))
                 w_voc_disp.addstr(2,x_pos_text,'O')
         else:
+            # display all translations of one word
             concat_word_en = ''
             for j in range(0,len(en[i])):
                 if (j == len(en[i])-1):
@@ -59,13 +68,17 @@ def display_voc(vocs,disp_type=0):
             w_voc_disp.addstr(1,x_pos_text,concat_word_en)
             w_voc_disp.refresh()
 
-            user_resp = w_voc_resp.getstr(1,x_pos_text).decode(encoding='utf-8')
+            user_resp = w_voc_resp.getstr(0,x_pos_text).decode(encoding='utf-8')
             if not (isinstance(ja[i],list)):
                 if (user_resp != ja[i]):
                     w_voc_disp.addstr(2,x_pos_text,'X:'+ja[i])
                 else:
+                    num_cor_voc += 1
+                    w_voc_score.clear()
+                    w_voc_score.addstr(0,0,str(num_cor_voc)+'/'+str(len(vocs[0])))
                     w_voc_disp.addstr(2,x_pos_text,'O')
             else:
+                # display all translations of one word (other language)
                 concat_word_ja = ''
                 for k in range(0,len(ja[i])):
                     if (k == len(ja[i])-1):
@@ -76,8 +89,12 @@ def display_voc(vocs,disp_type=0):
                 if (user_resp in ja[i]):
                     w_voc_disp.addstr(2,x_pos_text,'O')
                 else:
+                    num_cor_voc += 1
+                    w_voc_score.clear()
+                    w_voc_score.addstr(0,0,str(num_cor_voc)+'/'+str(len(vocs[0])))
                     w_voc_disp.addstr(2,x_pos_text,'X:'+concat_word_ja)
 
+        w_voc_score.refresh()
         w_voc_disp.refresh()
         w_voc_disp.getch()
         w_voc_disp.clear()
