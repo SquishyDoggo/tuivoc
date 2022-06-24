@@ -96,6 +96,8 @@ def display_voc(vocs,disp_type=0):
 
         w_voc_score.refresh()
         w_voc_disp.refresh()
-        w_voc_disp.getch()
+        user_key = w_voc_disp.getch()
+        if user_key == ord('q'):
+            break
         w_voc_disp.clear()
         w_voc_resp.clear()

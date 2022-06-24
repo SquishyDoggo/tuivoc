@@ -7,7 +7,7 @@ import dictionaries
 import settings
 
 dicts = parsing.list_dicts()
-voc = parsing.get_voc(dicts[0])
+chosen_dict = dicts[0]
 
 stdscr = curses.initscr()
 curses.noecho()
@@ -21,9 +21,10 @@ while qt != 'quit':
     if qt == 'start':
         curses.curs_set(1)
         curses.echo()
+        voc = parsing.get_voc(chosen_dict)
         list_voc.display_voc(voc,disp_type=0)
     elif qt == 'dictionaries':
-        dictionaries.make_dicts(dicts) 
+        chosen_dict = dictionaries.make_dicts(dicts) 
     elif qt == 'settings':
         settings.make_settings()
 
