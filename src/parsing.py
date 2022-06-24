@@ -12,6 +12,9 @@ The script can be imported as a module and contains the functions:
 import os
 from bs4 import BeautifulSoup as bs
 
+
+path = os.path.dirname(os.path.dirname(__file__))+'/dicts'
+
 def list_dicts():
     """Lists all dictionary files of the project
 
@@ -21,8 +24,6 @@ def list_dicts():
         a list of strings of the dictionary file names
     """
 
-    os.chdir('..')
-    path = os.getcwd()+'/dicts'
     l_dicts = os.listdir(path)
     return l_dicts
 
@@ -42,7 +43,6 @@ def get_voc(dict_file):
 
     vocs = []
 
-    path = os.getcwd()+'/dicts'
     with open(path+'/'+dict_file,'r',encoding='utf-8') as file:
         data = file.read()
     soup = bs(data,'xml')
