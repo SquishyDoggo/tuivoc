@@ -25,6 +25,7 @@ def list_dicts():
     """
 
     l_dicts = os.listdir(path)
+    l_dicts.append('new')
     return l_dicts
 
 def get_voc(dict_file):

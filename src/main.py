@@ -7,7 +7,6 @@ import dictionaries
 import settings
 
 dicts = parsing.list_dicts()
-dicts += ['new']
 chosen_dict = dicts[0]
 
 stdscr = curses.initscr()
@@ -29,6 +28,7 @@ while qt != 'quit':
         if chosen_dict == 'new':
             curses.echo()
             dictionaries.make_new_dict()
+        dicts = parsing.list_dicts() # update dict list
     elif qt == 'settings':
         settings.make_settings()
 
