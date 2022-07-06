@@ -54,14 +54,18 @@ def make_new_dict():
 
     dict_name = get_input(0)
     root = ET.Element('dictionary')
-    user_quit = ''
-    while user_quit != ord('q'):
+    user_quit = False
+    while user_quit == False:
         voc = ET.SubElement(root,'vocabulary',id=str(i))
         # german word
         g_word = '0'
+        num_g_words = 0
         while g_word != '':
             g_word = get_input(2)
             if g_word == '':
+                # if first word of vocabulary empty, quit dictionary creation
+                if num_g_words == 0:
+                    user_quit = True
                 break
             else:
                 # german note
@@ -69,6 +73,10 @@ def make_new_dict():
                 ger = ET.SubElement(voc,'german',note=g_note)
 
                 ET.SubElement(ger,'word').text = g_word
+            num_g_words += 1
+
+        if user_quit == True:
+            break
 
         # japanese word
         j_word = '0'
@@ -86,9 +94,6 @@ def make_new_dict():
 
                 ET.SubElement(ja,'word',furigana=j_furi).text = j_word
         i += 1
-        w_new_dict.addstr(y//2,x//2-len(queries[6])//2,queries[6])
-        user_quit = w_new_dict.getch()
-        w_new_dict.clear()
 
     tree = ET.ElementTree(root)
     tree.write(dict_name)
