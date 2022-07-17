@@ -36,6 +36,7 @@ def display_voc(vocs,disp_type=0):
     else:
         ja = vocs[1]
         en = vocs[0]
+    furi = vocs[2]
 
     num_cor_voc = 0
     w_voc_score.addstr(0,0,str(num_cor_voc)+'/'+str(len(vocs[0])))
@@ -50,7 +51,7 @@ def display_voc(vocs,disp_type=0):
 
             user_resp = w_voc_resp.getstr(0,x_pos_text).decode(encoding='utf-8')
             if (user_resp != ja[i]):
-                w_voc_disp.addstr(2,x_pos_text,'X:'+ja[i])
+                w_voc_disp.addstr(2,x_pos_text,'X: '+ja[i]+' ['+furi[i]+']')
             else:
                 num_cor_voc += 1
                 w_voc_score.clear()
@@ -63,7 +64,7 @@ def display_voc(vocs,disp_type=0):
                 if (j == len(en[i])-1):
                     concat_word_en += en[i][j]
                 else: 
-                    concat_word_en += en[i][j]+';'
+                    concat_word_en += en[i][j]+' | '
             x_pos_text = x//2-len(concat_word_en)//2
             w_voc_disp.addstr(1,x_pos_text,concat_word_en)
             w_voc_disp.refresh()
@@ -71,7 +72,7 @@ def display_voc(vocs,disp_type=0):
             user_resp = w_voc_resp.getstr(0,x_pos_text).decode(encoding='utf-8')
             if not (isinstance(ja[i],list)):
                 if (user_resp != ja[i]):
-                    w_voc_disp.addstr(2,x_pos_text,'X:'+ja[i])
+                    w_voc_disp.addstr(2,x_pos_text,'X: '+ja[i]+' ['+furi[i]+']')
                 else:
                     num_cor_voc += 1
                     w_voc_score.clear()
@@ -84,7 +85,7 @@ def display_voc(vocs,disp_type=0):
                     if (k == len(ja[i])-1):
                         concat_word_ja += ja[i][k]
                     else:
-                        concat_word_ja += ja[i][k]+';'
+                        concat_word_ja += ja[i][k]+' | '
 
                 if (user_resp in ja[i]):
                     w_voc_disp.addstr(2,x_pos_text,'O')

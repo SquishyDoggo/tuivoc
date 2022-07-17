@@ -40,6 +40,7 @@ def get_voc(dict_file):
     -------
     vocs
         A list of lists containing the vocabulary, translations, notes, etc.
+        e.g. [ [[ja,ja,ja],ja,ja], [en,[en,en],en], [[furi,furi,furi],furi,furi] ]
     """
 
     vocs = []
@@ -52,6 +53,7 @@ def get_voc(dict_file):
     tags_ja = soup.find_all('japanese')
     text_en = []
     text_ja = []
+    text_furi = []
     for i in range(0,len(tags_en)):
         en_words = tags_en[i].find_all('word')
         ja_words = tags_ja[i].find_all('word')
@@ -65,6 +67,7 @@ def get_voc(dict_file):
             text_en.append(en_word_list)
         if ( len(ja_words) == 1 ):
            text_ja.append(ja_words[0].text.replace('\t','').replace('\n',''))
+           text_furi.append(ja_words[0]['furigana'])
         else:
             ja_word_list = []
             for j in range(0,len(ja_words)):
@@ -73,4 +76,5 @@ def get_voc(dict_file):
             text_ja.append(ja_word_list)
     vocs.append(text_ja)
     vocs.append(text_en)
+    vocs.append(text_furi)
     return vocs
